@@ -22,3 +22,31 @@ print bool('')
 
 OTHER_NAME_ABS = abs
 print OTHER_NAME_ABS(-1)
+
+#自定义函数
+def my_abs(x):
+	if x >= 0:
+		return x
+	else:
+		return -x
+print my_abs(-20)
+#空函数
+def nop():
+	pass
+#参数检查
+print my_abs('A')
+#print abs('A')
+#加上参数类型检查
+def my_abs(x):
+	if not isinstance(x, (int, float)):
+		raise TypeError('bad operand type')
+	if x >= 0:
+		return x
+	else:
+		return -x
+print my_abs('A')
+
+
+
+
+
